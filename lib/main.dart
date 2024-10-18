@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
+import 'package:mam_projekt_v1/tools/tools.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,16 +17,23 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
+
+              // hier wird der Hintergund versehen mit eine Gradient. Die Start un dEndfarben werden aus den Colors geholt
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                backgroundStartColor,
-                backgroundEndColor,
+                backgroundGradientStartColor,
+                backgroundGradientEndColor
               ])),
           child: const Center(
-            child: Text(
-              'Hello World!',
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Hello World!'),
+                verticalSpacing,
+                Text("Test2"),
+              ],
             ),
           ),
         ),
