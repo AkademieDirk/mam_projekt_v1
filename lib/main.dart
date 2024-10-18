@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
+import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/information_card_example.dart';
 import 'package:mam_projekt_v1/tools/tools.dart';
 
 void main() {
@@ -30,9 +31,8 @@ class MainApp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Hello World!'),
+                InformationCard(),
                 verticalSpacing,
-                Text("Test2"),
               ],
             ),
           ),
