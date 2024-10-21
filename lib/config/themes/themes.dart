@@ -7,3 +7,8 @@ ThemeData mamTheme = ThemeData(
         bodyMedium: TextStyle(fontSize: normaTextSize),
         headlineMedium: TextStyle(fontSize: bigTextSize),
         bodySmall: TextStyle(fontSize: smallTextSize)));
+
+Icon closebutton = const Icon(Icons.close_rounded);
+const verticalSpacing = SizedBox(
+  height: 20,
+);

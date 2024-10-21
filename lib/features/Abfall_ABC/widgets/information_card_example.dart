@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mam_projekt_v1/config/sizes/sizes.dart';
+import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/information_card_class.dart';
 
 class InformationCard extends StatelessWidget {
@@ -7,10 +9,42 @@ class InformationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: Card(
-      child: Column(children: [
-        Text(trashdata[1].title1),
-      ]),
+        child: SizedBox(
+      width: 300,
+      child: Card(
+        child: Column(children: [
+          Row(
+            children: [
+              const Expanded(child: SizedBox()),
+              Text(trashdata[0].title1),
+              const Expanded(child: SizedBox()),
+              closebutton,
+              verticalSpacing,
+            ],
+          ),
+          verticalSpacing,
+          const Image(
+            height: 100,
+            width: 100,
+            image: AssetImage("assets/images/Abbeizer.jpg"),
+          ),
+          verticalSpacing,
+          Row(children: [
+            const Expanded(child: SizedBox()),
+            Text(trashdata[0].title2),
+            const Expanded(child: SizedBox()),
+          ]),
+          verticalSpacing,
+          Text(
+            trashdata[0].trashDescription,
+            style: Theme.of(context).textTheme.bodySmall,
+            textAlign: TextAlign.center,
+          ),
+          verticalSpacing,
+          Text(trashdata[0].danger,
+              style: Theme.of(context).textTheme.bodySmall),
+        ]),
+      ),
     ));
   }
 }

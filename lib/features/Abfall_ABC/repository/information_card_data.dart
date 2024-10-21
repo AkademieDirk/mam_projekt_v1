@@ -3,9 +3,10 @@ import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/information_c
 List<InformationCardClass> trashdata = [
   InformationCardClass(
       title1: "Abbeizmittel",
-      trashDescription: "Abbeizmittel",
-      title2: "tirle 2",
-      desposalDescription: "Bitte zum Bauhof",
+      trashDescription:
+          "gehört zum Sondermüll. Restlos entleerte Behälter gehören in dei gelbe Tonne",
+      title2: "Entsorgungsvorschrift",
+      desposalDescription: "Umweltmobil oder ZBH",
       danger: "sehr umweltgefährdend"),
   InformationCardClass(
       title1: "Eintrag 2",

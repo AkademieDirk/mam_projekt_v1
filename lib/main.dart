@@ -36,7 +36,6 @@ class MainApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InformationCard(trashdata: trashdata),
-                verticalSpacing,
               ],
             ),
           ),
