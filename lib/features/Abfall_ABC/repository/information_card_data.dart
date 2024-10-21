@@ -6,4 +6,9 @@ List<InformationCardClass> trashdata = [
       trashDescription: "Abbeizmittel",
       title2: "tirle 2",
       desposalDescription: "Bitte zum Bauhof"),
+  InformationCardClass(
+      title1: "Eintrag 2",
+      trashDescription: "Abbeizmittel",
+      title2: "tirle 2",
+      desposalDescription: "Bitte zum Bauhof"),
 ];
