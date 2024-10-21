@@ -15,7 +15,10 @@ class InformationCard extends StatelessWidget {
           Row(
             children: [
               const Expanded(child: SizedBox()),
-              Text(trashdata[0].title1),
+              Text(
+                trashdata[0].title1,
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
               const Expanded(child: SizedBox()),
               GestureDetector(
                   onTap: () {
@@ -34,7 +37,10 @@ class InformationCard extends StatelessWidget {
           verticalSpacing,
           Row(children: [
             const Expanded(child: SizedBox()),
-            Text(trashdata[0].title2),
+            Text(
+              trashdata[0].title2,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
             const Expanded(child: SizedBox()),
           ]),
           verticalSpacing,
