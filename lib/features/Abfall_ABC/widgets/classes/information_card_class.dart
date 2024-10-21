@@ -1,5 +1,3 @@
-import 'package:mam_projekt_v1/features/Abfall_ABC/repository/information_card_data.dart';
-
 class InformationCardClass {
   final String title1;
   final String trashDescription;

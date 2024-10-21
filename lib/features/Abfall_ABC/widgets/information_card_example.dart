@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mam_projekt_v1/config/sizes/sizes.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/information_card_class.dart';
 
@@ -18,7 +17,11 @@ class InformationCard extends StatelessWidget {
               const Expanded(child: SizedBox()),
               Text(trashdata[0].title1),
               const Expanded(child: SizedBox()),
-              closebutton,
+              GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: closebutton),
               verticalSpacing,
             ],
           ),

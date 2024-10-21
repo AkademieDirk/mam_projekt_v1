@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/repository/information_card_data.dart';
+import 'package:mam_projekt_v1/features/Abfall_ABC/screens/trash_abc_screen.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/information_card_class.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/information_card_example.dart';
-import 'package:mam_projekt_v1/tools/tools.dart';
 
 void main() {
   runApp(MainApp(
@@ -20,26 +18,13 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: mamTheme,
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
+        body: Container(child: TrashAbcScreen(trashdata: trashdata)),
 
-              // hier wird der Hintergund versehen mit eine Gradient. Die Start un dEndfarben werden aus den Colors geholt
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                backgroundGradientStartColor,
-                backgroundGradientEndColor
-              ])),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                InformationCard(trashdata: trashdata),
-              ],
-            ),
-          ),
-        ),
+        // child: Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     InformationCard(trashdata: trashdata),
+        //],
       ),
     );
   }
