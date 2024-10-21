@@ -27,8 +27,8 @@ class MainApp extends StatelessWidget {
                 backgroundGradientStartColor,
                 backgroundGradientEndColor
               ])),
-          child: const Center(
-            child: Column(
+          child: Center(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InformationCard(),
