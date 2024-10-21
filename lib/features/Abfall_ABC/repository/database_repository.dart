@@ -6,5 +6,6 @@ abstract class DatabaseRepository {
     String trashDescription,
     String title2,
     String desposalDescription,
+    String danger,
   );
 }

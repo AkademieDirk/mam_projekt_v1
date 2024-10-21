@@ -9,12 +9,14 @@ class MockDatabase implements DatabaseRepository {
     String trashDescription,
     String title2,
     String desposalDescription,
+    String danger,
   ) {
     InformationCardClass newtrashdata = InformationCardClass(
         title1: title1,
         title2: title2,
         desposalDescription: desposalDescription,
-        trashDescription: trashDescription);
+        trashDescription: trashDescription,
+        danger: danger);
     trashdata.add(newtrashdata);
   }
 }
