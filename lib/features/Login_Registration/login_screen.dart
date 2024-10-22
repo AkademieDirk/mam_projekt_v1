@@ -4,6 +4,7 @@ import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/my_own_container.dart';
+import 'package:mam_projekt_v1/features/Login_Registration/password_renew.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -45,9 +46,15 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(
                   width: 250,
                 ),
-                Text(
-                  "Forgot Password?",
-                  style: Theme.of(context).textTheme.bodySmall,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => PasswordRenew()));
+                  },
+                  child: Text(
+                    "Forgot Password?",
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
                 ),
               ],
             ),
