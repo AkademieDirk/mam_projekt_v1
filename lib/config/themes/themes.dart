@@ -27,8 +27,8 @@ const BoxDecoration background = BoxDecoration(
 );
 
 final BoxDecoration borderBasics = BoxDecoration(
-  color: Colors.white60,
-  border: Border.all(color: buttonBorder, width: 2.0),
+  color: Colors.white70,
+  border: Border.all(color: buttonBorder, width: 1.0),
   borderRadius: const BorderRadius.all(
     Radius.circular(10),
   ),

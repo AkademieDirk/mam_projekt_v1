@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
-import 'package:mam_projekt_v1/config/sizes/sizes.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/container_settings.dart';
+
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/my_own_container.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -30,14 +29,95 @@ class LoginScreen extends StatelessWidget {
                   const Expanded(child: SizedBox()),
                 ],
               ),
-              verticalSpacing,
+              const SizedBox(
+                height: 100,
+              ),
               const Center(
                 child: MyOwnContainer(
-                  text: "Enter your EMail",
+                  text: "  Enter your EMail",
                 ),
               ),
               verticalSpacing,
-              const MyOwnContainer(text: "Enter your Password"),
+              const MyOwnContainer(text: "  Enter your Password"),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 250,
+                  ),
+                  Text(
+                    "Forgot Password?",
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 100),
+              Center(
+                child: Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(colors: [
+                        backgroundGradientStartColor,
+                        backgroundGradientEndColor,
+                      ]),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                      border: Border.all(color: buttonBorder, width: 1.0)),
+                  height: 50,
+                  width: 300,
+                  child: Text(
+                    "Login",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 150),
+              const Text(
+                "or Login with",
+                textAlign: TextAlign.center,
+              ),
+              verticalSpacing,
+              Row(
+                children: [
+                  const Expanded(child: SizedBox()),
+                  Container(
+                      decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                      height: 50,
+                      width: 100,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset("assets/icons/google_logo.png"))),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    height: 50,
+                    width: 100,
+                    child: const Icon(
+                      Icons.facebook_sharp,
+                      size: 40,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    height: 50,
+                    width: 100,
+                    child: const Icon(
+                      Icons.apple,
+                      size: 40,
+                    ),
+                  ),
+                  const Expanded(child: SizedBox())
+                ],
+              )
             ],
           ),
         )

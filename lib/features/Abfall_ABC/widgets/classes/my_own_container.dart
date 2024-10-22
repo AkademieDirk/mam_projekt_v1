@@ -12,7 +12,7 @@ class MyOwnContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         height: 50,
-        width: 200,
+        width: 300,
         decoration: borderBasics,
         alignment: Alignment.centerLeft,
         child: Text(text, style: Theme.of(context).textTheme.bodySmall));
