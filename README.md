@@ -1,3 +1,4 @@
 # mam_projekt_v1
 
-A new Flutter project.
+Hier entsteht die Müll App Marl
+Das ist die erste Version mit GUI. Zurzeit werden die Screens gecodet. Ihr werdet bald Screenshots bekommen
