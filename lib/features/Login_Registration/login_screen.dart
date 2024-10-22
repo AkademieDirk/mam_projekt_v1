@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 
@@ -84,9 +85,8 @@ class LoginScreen extends StatelessWidget {
                           borderRadius: BorderRadius.all(Radius.circular(10))),
                       height: 50,
                       width: 100,
-                      child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.asset("assets/icons/google_logo.png"))),
+                      child:
+                          const Center(child: FaIcon(FontAwesomeIcons.google))),
                   const SizedBox(
                     width: 20,
                   ),
