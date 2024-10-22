@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
+import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -55,7 +56,7 @@ class WelcomeScreen extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     "weiter als Gast",
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ))),
       Positioned(
           width: 200,
@@ -63,10 +64,15 @@ class WelcomeScreen extends StatelessWidget {
           top: 550,
           left: 110,
           child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                );
+              },
               child: Text(
                 "Login ",
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.bodyMedium,
               ))),
       Positioned(
           width: 200,
@@ -77,7 +83,7 @@ class WelcomeScreen extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 "Registrierung ",
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.bodyMedium,
               ))),
 
       //! hier ist vorbereitet für Icons Login mit
