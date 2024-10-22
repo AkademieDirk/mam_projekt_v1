@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
+import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -80,7 +81,10 @@ class WelcomeScreen extends StatelessWidget {
           top: 600,
           left: 110,
           child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const RegistrationScreen()));
+              },
               child: Text(
                 "Registrierung ",
                 style: Theme.of(context).textTheme.bodyMedium,
