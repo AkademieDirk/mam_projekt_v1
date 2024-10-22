@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
-import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
-import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
+import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/switcher_container.dart';
 
 class ContentSwitcher extends StatelessWidget {
   const ContentSwitcher({super.key});
@@ -21,12 +20,16 @@ class ContentSwitcher extends StatelessWidget {
               ]),
         ),
       ),
-      GridView.count(
-          crossAxisCount: 1,
-          children: List.generate(5, (index) {
-            return Container(
-                decoration: const BoxDecoration(color: Colors.red));
-          }))
+      const Positioned(
+        top: 140,
+        left: 160,
+        child: Column(children: [
+          SwitcherContainer(
+            picturepath: "assets/icons/Calendar.png",
+            text: "Kalender",
+          )
+        ]),
+      )
     ]));
   }
 }

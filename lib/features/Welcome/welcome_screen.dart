@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
-import 'package:mam_projekt_v1/features/Change_Screen/content_Switcher.dart';
+import 'package:mam_projekt_v1/features/Change_Screen/content_switcher.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
 
@@ -57,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
               ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ContentSwitcher()));
+                        builder: (context) => const ContentSwitcher()));
                   },
                   child: Text(
                     "weiter als Gast",

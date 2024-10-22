@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/my_own_container.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
-import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
 
 class PasswordRenew extends StatelessWidget {
   const PasswordRenew({super.key});

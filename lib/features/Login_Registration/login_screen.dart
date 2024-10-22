@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => PasswordRenew()));
+                        builder: (context) => const PasswordRenew()));
                   },
                   child: Text(
                     "Forgot Password?",
@@ -131,7 +131,7 @@ class LoginScreen extends StatelessWidget {
                 GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => RegistrationScreen()));
+                          builder: (context) => const RegistrationScreen()));
                     },
                     child: Text(
                       " Register Now",
@@ -139,7 +139,7 @@ class LoginScreen extends StatelessWidget {
                             color: darkgreenText,
                           ),
                     )),
-                Expanded(child: SizedBox()),
+                const Expanded(child: SizedBox()),
               ],
             ),
           ],
