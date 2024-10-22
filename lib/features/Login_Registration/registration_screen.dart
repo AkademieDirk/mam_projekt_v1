@@ -26,7 +26,7 @@ class RegistrationScreen extends StatelessWidget {
               Row(
                 children: [
                   const Expanded(child: SizedBox()),
-                  Text("Hallo. Registriere dich zum starten",
+                  Text("Hallo. Registriere dich zum Starten",
                       style: Theme.of(context)
                           .textTheme
                           .headlineSmall

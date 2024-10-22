@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
+import 'package:mam_projekt_v1/features/Change_Screen/content_Switcher.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
 
@@ -40,7 +41,7 @@ class WelcomeScreen extends StatelessWidget {
       ),
       Positioned(
         top: 400,
-        left: 95,
+        left: 120,
         child: Text(
           "Herzlich Willkommen",
           style: Theme.of(context).textTheme.bodyMedium,
@@ -54,7 +55,10 @@ class WelcomeScreen extends StatelessWidget {
           child:
               //! später auslagern mit übergabe Ziel oder Mathode
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ContentSwitcher()));
+                  },
                   child: Text(
                     "weiter als Gast",
                     style: Theme.of(context).textTheme.bodyMedium,
