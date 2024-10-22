@@ -76,48 +76,59 @@ class LoginScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               verticalSpacing,
-              Row(
-                children: [
-                  const Expanded(child: SizedBox()),
-                  Container(
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
-                      height: 50,
-                      width: 100,
-                      child:
-                          const Center(child: FaIcon(FontAwesomeIcons.google))),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Container(
+              Row(children: [
+                const Expanded(child: SizedBox()),
+                Container(
                     decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                     height: 50,
                     width: 100,
-                    child: const Icon(
-                      Icons.facebook_sharp,
-                      size: 40,
-                    ),
+                    child:
+                        const Center(child: FaIcon(FontAwesomeIcons.google))),
+                const SizedBox(
+                  width: 20,
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  height: 50,
+                  width: 100,
+                  child: const Icon(
+                    Icons.facebook,
+                    size: 40,
                   ),
-                  const SizedBox(
-                    width: 20,
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  height: 50,
+                  width: 100,
+                  child: const Icon(
+                    Icons.apple,
+                    size: 40,
                   ),
-                  Container(
-                    decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    height: 50,
-                    width: 100,
-                    child: const Icon(
-                      Icons.apple,
-                      size: 40,
-                    ),
-                  ),
-                  const Expanded(child: SizedBox())
-                ],
-              )
+                ),
+                const Expanded(child: SizedBox())
+              ]),
+              verticalBigSpacing,
+              Row(children: [
+                const Expanded(child: SizedBox()),
+                Text("Du hast noch keinen Account? ",
+                    style: Theme.of(context).textTheme.bodySmall),
+                Text(
+                  " Register Now",
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: darkgreenText,
+                      ),
+                ),
+                const Expanded(child: SizedBox())
+              ])
             ],
           ),
         )

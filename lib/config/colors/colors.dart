@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const Color greenText = Color.fromARGB(255, 23, 217, 210);
+const Color darkgreenText = Color.fromARGB(255, 1, 38, 6);
 const Color backgroundGradientStartColor = Color.fromARGB(255, 153, 170, 170);
 const Color backgroundGradientEndColor = Color.fromARGB(255, 81, 202, 202);
 const Color buttonGradientStartColor = Color.fromARGB(255, 107, 117, 117);

@@ -17,6 +17,9 @@ Icon closebutton = const Icon(Icons.close_rounded);
 const verticalSpacing = SizedBox(
   height: 20,
 );
+const verticalBigSpacing = SizedBox(
+  height: 60,
+);
 //  Einstellungen für den Screenhintergrund zum rauskopieren
 
 const BoxDecoration background = BoxDecoration(
