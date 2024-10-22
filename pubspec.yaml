@@ -9,7 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  font_awesome_flutter: ^10.7.0
   glass_container: ^0.0.4
+  
 
 dev_dependencies:
   flutter_test:
@@ -21,7 +23,9 @@ flutter:
 
   assets:
     - assets/images/
-    - assets/icons/
+    - assets/icons/logo-transparent.png
+    - assets/icons/google_logo.png
+
 
 
 fonts:
