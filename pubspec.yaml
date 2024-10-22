@@ -23,6 +23,8 @@ flutter:
   uses-material-design: true
 
   assets:
+    
+    - assets/icons/ContentSwitcher/
     - assets/images/
     - assets/icons/
     - assets/icons/logo-transparent.png

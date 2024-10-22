@@ -41,7 +41,7 @@ class WelcomeScreen extends StatelessWidget {
       ),
       Positioned(
         top: 400,
-        left: 120,
+        left: 125,
         child: Text(
           "Herzlich Willkommen",
           style: Theme.of(context).textTheme.bodyMedium,

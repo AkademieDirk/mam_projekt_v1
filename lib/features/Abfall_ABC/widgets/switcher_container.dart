@@ -22,11 +22,11 @@ class SwitcherContainer extends StatelessWidget {
             padding: const EdgeInsets.only(top: 8.0, bottom: 4),
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
-                child: const Image(
+                child: Image(
                     height: 100,
                     width: 100,
                     image: AssetImage(
-                      "assets/icons/Calendar.png",
+                      picturepath,
                     ))),
           ),
           Text(text)
