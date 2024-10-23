@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/switcher_container.dart';
+import 'package:mam_projekt_v1/features/Kalender/calender_main_screen.dart';
 
 class ContentSwitcher extends StatelessWidget {
   const ContentSwitcher({super.key});
@@ -21,26 +22,34 @@ class ContentSwitcher extends StatelessWidget {
               ]),
         ),
       ),
-      const Positioned(
+      Positioned(
         top: 80,
         left: 148,
         child: Column(children: [
-          SwitcherContainer(
-            picturepath: "assets/icons/Calendar.png",
-            text: "Kalender",
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const CalendarMainScreen()));
+            },
+            child: const SwitcherContainer(
+              picturepath: "assets/icons/ContentSwitcher/Calendar.png",
+              text: "Kalender",
+            ),
           ),
           verticalSpacing,
-          SwitcherContainer(picturepath: "assets/icons/News.png", text: "News"),
+          const SwitcherContainer(
+              picturepath: "assets/icons/ContentSwitcher/News.png",
+              text: "News"),
           verticalSpacing,
-          SwitcherContainer(
+          const SwitcherContainer(
               picturepath: "assets/icons/ContentSwitcher/Phone.png",
               text: "Service"),
           verticalSpacing,
-          SwitcherContainer(
+          const SwitcherContainer(
               picturepath: "assets/icons/ContentSwitcher/Recycling.png",
               text: "Recycle"),
           verticalSpacing,
-          SwitcherContainer(
+          const SwitcherContainer(
               picturepath: "assets/icons/ContentSwitcher/AbfallABC.png",
               text: "Abfall ABC")
         ]),

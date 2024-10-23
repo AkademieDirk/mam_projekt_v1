@@ -33,7 +33,8 @@ class WelcomeScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
                 image: const DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage("assets/icons/logo-transparent.png"),
+                    image:
+                        AssetImage("assets/icons/Logos/logo-transparent.png"),
                     opacity: 0.8)
                 //
                 //

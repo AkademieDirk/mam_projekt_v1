@@ -8,6 +8,7 @@ ThemeData mamTheme = ThemeData(
         bodySmall: TextStyle(fontSize: smallTextSize),
         bodyMedium: TextStyle(fontSize: normaTextSize),
         bodyLarge: TextStyle(fontSize: bigTextSize),
+        displaySmall: TextStyle(fontSize: 24),
         headlineMedium:
             TextStyle(fontSize: mediumTextSize, fontWeight: FontWeight.bold),
         headlineLarge:
