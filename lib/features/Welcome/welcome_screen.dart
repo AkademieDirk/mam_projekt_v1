@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
+import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Change_Screen/content_switcher.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
@@ -10,8 +11,8 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(children: [
-      Container(
+      body: Container(
+        width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topLeft,
@@ -21,55 +22,30 @@ class WelcomeScreen extends StatelessWidget {
                 backgroundGradientEndColor
               ]),
         ),
-      ),
-      Positioned(
-        left: 60,
-        top: 100,
-        height: 300,
-        width: 300,
-        child: Container(
-            clipBehavior: Clip.hardEdge,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                image: const DecorationImage(
-                    fit: BoxFit.cover,
-                    image:
-                        AssetImage("assets/icons/Logos/logo-transparent.png"),
-                    opacity: 0.8)
-                //
-                //
-                )),
-      ),
-      Positioned(
-        top: 400,
-        left: 125,
-        child: Text(
-          "Herzlich Willkommen",
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
-      ),
-      Positioned(
-          width: 200,
-          height: 30,
-          top: 500,
-          left: 110,
-          child:
-              //! später auslagern mit übergabe Ziel oder Mathode
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const ContentSwitcher()));
-                  },
-                  child: Text(
-                    "weiter als Gast",
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ))),
-      Positioned(
-          width: 200,
-          height: 30,
-          top: 550,
-          left: 110,
-          child: ElevatedButton(
+        child: SafeArea(
+            child: Column(children: [
+          const SizedBox(
+            height: 300,
+            child: Image(
+                image: AssetImage("assets/icons/Logos/logo-transparent.png")),
+          ),
+          verticalSpacing,
+          Text(
+            "Herzlich Willkommen",
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+          verticalBigSpacing,
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ContentSwitcher()));
+              },
+              child: Text(
+                "weiter als Gast",
+                style: Theme.of(context).textTheme.bodyMedium,
+              )),
+          verticalSpacing,
+          ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
@@ -79,13 +55,9 @@ class WelcomeScreen extends StatelessWidget {
               child: Text(
                 "Login ",
                 style: Theme.of(context).textTheme.bodyMedium,
-              ))),
-      Positioned(
-          width: 200,
-          height: 30,
-          top: 600,
-          left: 110,
-          child: ElevatedButton(
+              )),
+          verticalSpacing,
+          ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const RegistrationScreen()));
@@ -93,12 +65,15 @@ class WelcomeScreen extends StatelessWidget {
               child: Text(
                 "Registrierung ",
                 style: Theme.of(context).textTheme.bodyMedium,
-              ))),
-
-      //! hier ist vorbereitet für Icons Login mit
-      const Row(
-        children: [],
-      )
-    ]));
+              )),
+        ]
+                //   //! hier ist vorbereitet für Icons Login mit
+                //   const Row(
+                //     children: [],
+                //   )
+                // ],]),
+                )),
+      ),
+    );
   }
 }

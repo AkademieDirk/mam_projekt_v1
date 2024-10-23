@@ -11,77 +11,75 @@ class PasswordRenew extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(children: [
-      Container(
-        decoration: background,
+        body: Container(
+      width: double.infinity,
+      decoration: background,
+      child: Column(
+        children: [
+          verticalBigSpacing,
+          const SizedBox(
+            height: 30,
+          ),
+          Row(
+            children: [
+              const Expanded(child: SizedBox()),
+              Text("Passwort vergessen",
+                  style: Theme.of(context).textTheme.headlineMedium),
+              const Expanded(child: SizedBox()),
+            ],
+          ),
+          const SizedBox(
+            height: 100,
+          ),
+          const Center(
+            child: MyOwnContainer(
+              text: "  Enter your EMail",
+            ),
+          ),
+          verticalSpacing,
+          const SizedBox(height: 50),
+          Center(
+            child: Container(
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  gradient: const LinearGradient(colors: [
+                    backgroundGradientStartColor,
+                    backgroundGradientEndColor,
+                  ]),
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  border: Border.all(color: buttonBorder, width: 1.0)),
+              height: 50,
+              width: 300,
+              child: Text(
+                "Send Code",
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+            ),
+          ),
+          const SizedBox(height: 150),
+          verticalSpacing,
+          verticalBigSpacing,
+          Row(
+            children: [
+              const Expanded(child: SizedBox()),
+              Text("Dir ist dein Passwort wieder eingefallen?",
+                  style: Theme.of(context).textTheme.bodySmall),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const LoginScreen()));
+                  },
+                  child: Text(
+                    " Hier einloggen",
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: darkgreenText,
+                        ),
+                  )),
+              const Expanded(child: SizedBox()),
+            ],
+          ),
+        ],
       ),
-      SafeArea(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 30,
-            ),
-            Row(
-              children: [
-                const Expanded(child: SizedBox()),
-                Text("Passwort vergessen",
-                    style: Theme.of(context).textTheme.headlineMedium),
-                const Expanded(child: SizedBox()),
-              ],
-            ),
-            const SizedBox(
-              height: 100,
-            ),
-            const Center(
-              child: MyOwnContainer(
-                text: "  Enter your EMail",
-              ),
-            ),
-            verticalSpacing,
-            const SizedBox(height: 50),
-            Center(
-              child: Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    gradient: const LinearGradient(colors: [
-                      backgroundGradientStartColor,
-                      backgroundGradientEndColor,
-                    ]),
-                    borderRadius: const BorderRadius.all(Radius.circular(10)),
-                    border: Border.all(color: buttonBorder, width: 1.0)),
-                height: 50,
-                width: 300,
-                child: Text(
-                  "Send Code",
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
-              ),
-            ),
-            const SizedBox(height: 150),
-            verticalSpacing,
-            verticalBigSpacing,
-            Row(
-              children: [
-                const Expanded(child: SizedBox()),
-                Text("Dir ist dein Passwort wieder eingefallen?",
-                    style: Theme.of(context).textTheme.bodySmall),
-                GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const LoginScreen()));
-                    },
-                    child: Text(
-                      " Hier einloggen",
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            color: darkgreenText,
-                          ),
-                    )),
-                const Expanded(child: SizedBox()),
-              ],
-            ),
-          ],
-        ),
-      )
-    ]));
+    ));
   }
 }

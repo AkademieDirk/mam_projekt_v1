@@ -19,7 +19,10 @@ class CalendarCardWidget extends StatelessWidget {
               width: 120,
               image: AssetImage(picturePath)),
           const SizedBox(height: 10),
-          Text(text, style: Theme.of(context).textTheme.bodyMedium),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Text(text, style: Theme.of(context).textTheme.bodyMedium),
+          ),
         ],
       ),
     );
