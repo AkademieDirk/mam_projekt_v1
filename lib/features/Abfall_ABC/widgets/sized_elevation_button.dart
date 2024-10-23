@@ -1,5 +1,6 @@
+// ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
-import 'package:mam_projekt_v1/features/Change_Screen/content_switcher.dart';
 
 class SizedElevationButton extends StatelessWidget {
   SizedElevationButton({

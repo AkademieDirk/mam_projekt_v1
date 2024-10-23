@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Change_Screen/content_switcher.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
@@ -14,15 +13,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                backgroundGradientStartColor,
-                backgroundGradientEndColor
-              ]),
-        ),
+        decoration: background,
         child: SafeArea(
             child: Column(children: [
           const SizedBox(
@@ -41,10 +32,10 @@ class WelcomeScreen extends StatelessWidget {
             text: "weiter als Gast",
           ),
           verticalSpacing,
-          SizedElevationButton(text: "Login", screenname: LoginScreen()),
+          SizedElevationButton(text: "Login", screenname: const LoginScreen()),
           verticalSpacing,
           SizedElevationButton(
-              text: "Registrierung", screenname: RegistrationScreen())
+              text: "Registrierung", screenname: const RegistrationScreen())
         ]
                 //   //! hier ist vorbereitet für Icons Login mit
                 //   const Row(

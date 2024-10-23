@@ -14,4 +14,10 @@ List<InformationCardClass> trashdata = [
       title2: "tirle 2",
       desposalDescription: "Bitte zum Bauhof",
       danger: "sehr Umweltgefährden"),
+  InformationCardClass(
+      title1: "Beispieltitel 3",
+      trashDescription: "Beispieltitel 3",
+      title2: "Beispieltitel 3",
+      desposalDescription: "Bitte zum Bauhof",
+      danger: "sehr Umweltgefährden"),
 ];
