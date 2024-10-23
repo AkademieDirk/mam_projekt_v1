@@ -30,8 +30,8 @@ class ContentSwitcher extends StatelessWidget {
               verticalSpacing,
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => NewsScreen()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => NewsScreen(trashdata: trashdata)));
                 },
                 child: const SwitcherContainer(
                     picturepath: "assets/icons/ContentSwitcher/News.png",
