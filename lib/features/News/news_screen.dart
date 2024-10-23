@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/information_card_class.dart';
+import 'package:mam_projekt_v1/features/News/news_container.dart';
 
 class NewsScreen extends StatelessWidget {
   const NewsScreen({super.key, required this.trashdata});
@@ -11,33 +12,34 @@ class NewsScreen extends StatelessWidget {
         width: double.infinity,
         decoration: background,
         child: SafeArea(
-          child: Column(
-            children: [
-              verticalBigSpacing,
-              Text(
-                "Hier die neuesten News",
-                style: Theme.of(context).textTheme.displaySmall,
-              ),
-              verticalSpacing,
-              Column(children: [
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                verticalBigSpacing,
                 Text(
-                  "Hier kommt die Überschrift rein",
+                  "Aktuelle Meldungen",
                   style: Theme.of(context).textTheme.displaySmall,
-                )
-              ]),
-              verticalSpacing,
-              const Image(
-                  image: AssetImage("assets/images/News/Newsimage.png")),
-              verticalBigSpacing,
-              Column(children: [
-                Text(
-                  "Hier kommt die Überschrift rein",
-                  style: Theme.of(context).textTheme.displaySmall,
-                )
-              ]),
-              verticalSpacing,
-              const Image(image: AssetImage("assets/images/News/Newsimage.png"))
-            ],
+                ),
+                verticalSpacing,
+                verticalSpacing,
+                const NewsContainer(
+                  newsimagepath: "assets/images/News/Blaue_Tonne_news.jpg",
+                  text: "Papierabfuhr erfolgt später",
+                ),
+                verticalMediumSpacing,
+                const NewsContainer(
+                    text: "Der Verkehr rollt wieder auf der Loekampstraße",
+                    newsimagepath: "assets/images/News/NewsLoekampstr.jpg"),
+                verticalMediumSpacing,
+                const NewsContainer(
+                    text: "Der Herbst ist da: Die Laubabfuhr startet",
+                    newsimagepath: "assets/images/News/Herbst.jpg"),
+                verticalMediumSpacing,
+                const NewsContainer(
+                    text: "Der Herbst ist da: Die Laubabfuhr startet",
+                    newsimagepath: "assets/images/News/Herbst.jpg")
+              ],
+            ),
           ),
         ));
   }

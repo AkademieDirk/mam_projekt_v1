@@ -19,7 +19,7 @@ class SwitcherContainer extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 8.0, bottom: 4),
+            padding: const EdgeInsets.only(top: 4.0, bottom: 4),
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Image(

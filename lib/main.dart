@@ -19,12 +19,6 @@ class MainApp extends StatelessWidget {
       theme: mamTheme,
       home: const Scaffold(
         body: WelcomeScreen(),
-
-        // child: Column(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     InformationCard(trashdata: trashdata),
-        //],
       ),
     );
   }

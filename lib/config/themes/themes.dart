@@ -6,9 +6,11 @@ ThemeData mamTheme = ThemeData(
     fontFamily: "Urbanist",
     textTheme: const TextTheme(
         bodySmall: TextStyle(fontSize: smallTextSize),
-        bodyMedium: TextStyle(fontSize: normaTextSize),
+        bodyMedium: TextStyle(fontSize: mediumTextSize),
         bodyLarge: TextStyle(fontSize: bigTextSize),
-        displaySmall: TextStyle(fontSize: 24),
+        displaySmall: TextStyle(
+          fontSize: 24,
+        ),
         headlineMedium:
             TextStyle(fontSize: mediumTextSize, fontWeight: FontWeight.bold),
         headlineLarge:
@@ -17,6 +19,9 @@ ThemeData mamTheme = ThemeData(
 Icon closebutton = const Icon(Icons.close_rounded);
 const verticalSpacing = SizedBox(
   height: 20,
+);
+const verticalMediumSpacing = SizedBox(
+  height: 40,
 );
 const verticalBigSpacing = SizedBox(
   height: 60,
