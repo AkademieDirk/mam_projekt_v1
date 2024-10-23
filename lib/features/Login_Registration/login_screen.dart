@@ -18,9 +18,8 @@ class LoginScreen extends StatelessWidget {
       decoration: background,
       child: Column(
         children: [
-          const SizedBox(
-            height: 30,
-          ),
+          verticalBigSpacing,
+          verticalBigSpacing,
           Row(
             children: [
               const Expanded(child: SizedBox()),

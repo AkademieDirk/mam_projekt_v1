@@ -3,6 +3,7 @@ import 'package:flutter_social_button/flutter_social_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
+import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/expanded_sized_box.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/my_own_container.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
 
@@ -21,12 +22,13 @@ class RegistrationScreen extends StatelessWidget {
           verticalBigSpacing,
           Row(
             children: [
-              Text("Hallo. Registriere dich zum Starten",
+              const ExpandedSizedBox(),
+              Text("Registriere dich zum Starten",
                   style: Theme.of(context)
                       .textTheme
                       .headlineSmall
                       ?.copyWith(fontWeight: FontWeight.bold)),
-              const Expanded(child: SizedBox()),
+              const ExpandedSizedBox()
             ],
           ),
           const SizedBox(

@@ -4,6 +4,7 @@ import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Change_Screen/content_switcher.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
+import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/sized_elevation_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -32,40 +33,18 @@ class WelcomeScreen extends StatelessWidget {
           verticalSpacing,
           Text(
             "Herzlich Willkommen",
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.displaySmall,
           ),
           verticalBigSpacing,
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const ContentSwitcher()));
-              },
-              child: Text(
-                "weiter als Gast",
-                style: Theme.of(context).textTheme.bodyMedium,
-              )),
+          SizedElevationButton(
+            screenname: const ContentSwitcher(),
+            text: "weiter als Gast",
+          ),
           verticalSpacing,
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const LoginScreen()),
-                );
-              },
-              child: Text(
-                "Login ",
-                style: Theme.of(context).textTheme.bodyMedium,
-              )),
+          SizedElevationButton(text: "Login", screenname: LoginScreen()),
           verticalSpacing,
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const RegistrationScreen()));
-              },
-              child: Text(
-                "Registrierung ",
-                style: Theme.of(context).textTheme.bodyMedium,
-              )),
+          SizedElevationButton(
+              text: "Registrierung", screenname: RegistrationScreen())
         ]
                 //   //! hier ist vorbereitet für Icons Login mit
                 //   const Row(

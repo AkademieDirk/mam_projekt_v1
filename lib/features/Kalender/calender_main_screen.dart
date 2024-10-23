@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Kalender/calendar_card_widget.dart';
-import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/expanded_sized_box.dart';
 
 class CalendarMainScreen extends StatelessWidget {
@@ -11,15 +10,7 @@ class CalendarMainScreen extends StatelessWidget {
     return Scaffold(
         body: Container(
             width: double.infinity,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    backgroundGradientStartColor,
-                    backgroundGradientEndColor
-                  ]),
-            ),
+            decoration: background,
             child: Column(
               children: [
                 verticalBigSpacing,
