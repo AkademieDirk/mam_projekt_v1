@@ -4,6 +4,7 @@ import 'package:mam_projekt_v1/features/Abfall_ABC/repository/information_card_d
 import 'package:mam_projekt_v1/features/Abfall_ABC/screens/trash_abc_screen.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/switcher_container.dart';
 import 'package:mam_projekt_v1/features/Kalender/calender_main_screen.dart';
+import 'package:mam_projekt_v1/features/Muelltrennung/muell_trennung.dart';
 import 'package:mam_projekt_v1/features/News/news_screen.dart';
 
 class ContentSwitcher extends StatelessWidget {
@@ -42,9 +43,17 @@ class ContentSwitcher extends StatelessWidget {
                   picturepath: "assets/icons/ContentSwitcher/Phone.png",
                   text: "Service"),
               verticalSpacing,
-              const SwitcherContainer(
-                  picturepath: "assets/icons/ContentSwitcher/Recycling.png",
-                  text: "Recycle"),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Muelltrennung()));
+                },
+                child: const SwitcherContainer(
+                    picturepath: "assets/icons/ContentSwitcher/Recycling.png",
+                    text: "Recycle"),
+              ),
               verticalSpacing,
               GestureDetector(
                 onTap: () {

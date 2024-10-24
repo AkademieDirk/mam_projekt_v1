@@ -17,6 +17,10 @@ ThemeData mamTheme = ThemeData(
             TextStyle(fontSize: bigTextSize, fontWeight: FontWeight.w500)));
 
 Icon closebutton = const Icon(Icons.close_rounded);
+const verticalSmallSpacing = SizedBox(
+  height: 10,
+);
+
 const verticalSpacing = SizedBox(
   height: 20,
 );
@@ -42,3 +46,13 @@ final BoxDecoration borderBasics = BoxDecoration(
     Radius.circular(10),
   ),
 );
+TextStyle textbackgroungrounded() {
+  return TextStyle(
+      background: Paint()
+        ..color = Colors.blue
+        ..strokeWidth = 30
+        ..strokeJoin = StrokeJoin.round
+        ..strokeCap = StrokeCap.round
+        ..style = PaintingStyle.stroke,
+      color: Colors.black);
+}
