@@ -9,8 +9,10 @@ class BrownCanInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const BasicAppBar(
+          textcolor: Color.fromARGB(255, 74, 50, 45),
           title: "Die braune Tonne",
-          canColorImagePath: "assets/images/TrashCanColor/braune_Tonne.png"),
+          canColorImagePath:
+              "assets/images/TrashCanColor/braune_Tonne_transparent.png"),
       body: Container(
           width: double.infinity,
           decoration: background,

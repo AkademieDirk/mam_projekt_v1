@@ -9,8 +9,10 @@ class YellowCanInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const BasicAppBar(
+        textcolor: Colors.yellow,
         title: "Die gelbe Tonne",
-        canColorImagePath: "assets/images/TrashCanColor/gelbe_Tonne.png",
+        canColorImagePath:
+            "assets/images/TrashCanColor/gelbe_Tonne_transparent.png",
       ),
       body: Container(
           width: double.infinity,

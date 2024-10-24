@@ -6,9 +6,11 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     required this.title,
     required this.canColorImagePath,
+    required this.textcolor,
   });
   final String title;
   final String canColorImagePath;
+  final Color textcolor;
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -16,7 +18,7 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
           style: Theme.of(context)
               .textTheme
               .displaySmall
-              ?.copyWith(color: Colors.yellow)),
+              ?.copyWith(color: textcolor)),
 
       elevation: 12,
       backgroundColor: appbarcolor,
@@ -25,11 +27,13 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       actions: [
         SizedBox(
-          height: 50,
+          height: 60,
           width: 40,
           child: ClipRRect(
             borderRadius: const BorderRadius.all(Radius.circular(10)),
-            child: Image(image: AssetImage(canColorImagePath)),
+            child: Image(
+              image: AssetImage(canColorImagePath),
+            ),
           ),
         ),
         const SizedBox(
