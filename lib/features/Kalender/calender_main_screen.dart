@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mam_projekt_v1/basic_app_bar.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Kalender/calendar_card_widget.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/expanded_sized_box.dart';
@@ -8,20 +9,19 @@ class CalendarMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: const BasicAppBar(
+            title: "Abfuhrtermine",
+            canColorImagePath: "assets/images/TrashCanColor/Muellabfuhr.jpeg",
+            textcolor: Colors.black),
         body: Container(
             width: double.infinity,
             decoration: background,
-            child: Column(
+            child: const Column(
               children: [
-                verticalBigSpacing,
-                verticalBigSpacing,
-                Text("Welche Termine wollen Sie sehen?",
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.displaySmall),
-                const SizedBox(
+                SizedBox(
                   height: 80,
                 ),
-                const Row(
+                Row(
                   children: [
                     ExpandedSizedBox(),
                     CalendarCardWidget(
@@ -36,7 +36,7 @@ class CalendarMainScreen extends StatelessWidget {
                   ],
                 ),
                 verticalBigSpacing,
-                const Row(
+                Row(
                   children: [
                     ExpandedSizedBox(),
                     CalendarCardWidget(
@@ -51,7 +51,7 @@ class CalendarMainScreen extends StatelessWidget {
                   ],
                 ),
                 verticalBigSpacing,
-                const Row(
+                Row(
                   children: [
                     ExpandedSizedBox(),
                     CalendarCardWidget(

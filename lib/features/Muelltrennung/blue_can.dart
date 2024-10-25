@@ -8,7 +8,7 @@ class BlueCanInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BasicAppBar(
+      appBar: const BasicAppBar(
           title: "Die blaue Tonne",
           canColorImagePath:
               "assets/images/TrashCanColor/blaue_Tonne_transparent.png",

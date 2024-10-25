@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mam_projekt_v1/basic_app_bar.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 import 'package:mam_projekt_v1/features/Muelltrennung/black_can.dart';
 import 'package:mam_projekt_v1/features/Muelltrennung/blue_can.dart';
@@ -12,13 +13,16 @@ class Muelltrennung extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: const BasicAppBar(
+            title: "Was gehört wo rein?",
+            canColorImagePath:
+                "assets/images/TrashCanColor/Fragezeichen_transparent.png",
+            textcolor: Colors.black),
         body: Container(
             width: double.infinity,
             decoration: background,
             child: Column(children: [
-              SafeArea(
-                  child: Text(" Was gehört in welche Tonne?",
-                      style: Theme.of(context).textTheme.bodyMedium)),
+              verticalSmallSpacing,
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -30,7 +34,7 @@ class Muelltrennung extends StatelessWidget {
                 child: const GarbageCanPaintContainer(
                     text: "Gelbe Tonne",
                     trashcolorimagepath:
-                        "assets/images/TrashCanColor/gelbe_Tonne.png"),
+                        "assets/images/TrashCanColor/gelbe_Tonne_transparent.png"),
               ),
               GestureDetector(
                 onTap: () {
@@ -42,7 +46,7 @@ class Muelltrennung extends StatelessWidget {
                 },
                 child: const GarbageCanPaintContainer(
                   trashcolorimagepath:
-                      "assets/images/TrashCanColor/blaue_Tonne.png",
+                      "assets/images/TrashCanColor/blaue_Tonne_transparent.png",
                   text: "Blaue Tonne",
                 ),
               ),
@@ -54,7 +58,7 @@ class Muelltrennung extends StatelessWidget {
                 },
                 child: const GarbageCanPaintContainer(
                   trashcolorimagepath:
-                      "assets/images/TrashCanColor/braune_Tonne.png",
+                      "assets/images/TrashCanColor/braune_Tonne_transparent.png",
                   text: "braune Tonne",
                 ),
               ),
@@ -66,7 +70,7 @@ class Muelltrennung extends StatelessWidget {
                 },
                 child: const GarbageCanPaintContainer(
                   trashcolorimagepath:
-                      "assets/images/TrashCanColor/schwarz.png",
+                      "assets/images/TrashCanColor/schwarz_transparent.png",
                   text: "Restmüll Tonne",
                 ),
               ),

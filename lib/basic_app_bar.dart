@@ -20,20 +20,14 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
               .displaySmall
               ?.copyWith(color: textcolor)),
 
-      elevation: 12,
       backgroundColor: appbarcolor,
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(30))),
+
       centerTitle: true,
       actions: [
         SizedBox(
-          height: 60,
-          width: 40,
-          child: ClipRRect(
-            borderRadius: const BorderRadius.all(Radius.circular(10)),
-            child: Image(
-              image: AssetImage(canColorImagePath),
-            ),
+          width: 50,
+          child: Image(
+            image: AssetImage(canColorImagePath),
           ),
         ),
         const SizedBox(
@@ -46,6 +40,6 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  //! hier wird die Klasse um eiune Größe erweitert um diese universal einsetzen zu können
+  //! hier wird die Klasse um eine Größe erweitert um diese universal einsetzen zu können
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
