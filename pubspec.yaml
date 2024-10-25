@@ -24,9 +24,9 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  adaptive_icon_background: "assets/icons/Logos/logo-transparent.png" 
-  adaptive_icon_foreground: "assets/icons/Logos/logo-transparent.png"
-  image_path: "assets/icons/Logos/logo-transparent.png"
+  adaptive_icon_background: "assets/icons/Logos/logo.png" 
+  adaptive_icon_foreground: "assets/icons/Logos/logo.png"
+  image_path: "assets/icons/Logos/logo.png"
 
 flutter:
   uses-material-design: true
