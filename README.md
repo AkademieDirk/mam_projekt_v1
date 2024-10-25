@@ -7,4 +7,4 @@ Die grundlegenden Screens sind hinzugefügt. Die Navigation zu den Hauptscreens 
 Grundlegende Grafiken sind als Platzhalter eingefügt. 
 Somit ist bis hierhin die Richtung dr App erkennbar.
 
-![LogIn Srenn](lib/config/Screenshots/LogInScreen.png)
+![Preview_Screens](lib/config/Screenshots/Preview Screens.png)
