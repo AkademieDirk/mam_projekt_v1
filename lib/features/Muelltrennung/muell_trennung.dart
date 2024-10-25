@@ -16,7 +16,7 @@ class Muelltrennung extends StatelessWidget {
         appBar: const BasicAppBar(
             title: "Was gehört wo rein?",
             canColorImagePath:
-                "assets/images/TrashCanColor/Fragezeichen_transparent.png",
+                "assets/images/TrashCanColor/Tonne_gruen_comic.png",
             textcolor: Colors.black),
         body: Container(
             width: double.infinity,
