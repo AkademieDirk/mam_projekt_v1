@@ -4,7 +4,7 @@ import 'package:mam_projekt_v1/features/Abfall_ABC/repository/information_card_d
 import 'package:mam_projekt_v1/features/Abfall_ABC/screens/trash_abc_screen.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/switcher_container.dart';
 import 'package:mam_projekt_v1/features/Kalender/calender_main_screen.dart';
-import 'package:mam_projekt_v1/features/Muelltrennung/muell_trennung.dart';
+import 'package:mam_projekt_v1/features/Muelltrennung/waste_separation_screen.dart';
 import 'package:mam_projekt_v1/features/News/news_screen.dart';
 
 class ContentSwitcher extends StatelessWidget {
