@@ -17,26 +17,31 @@ class NewsScreen extends StatelessWidget {
       body: Container(
           width: double.infinity,
           decoration: background,
-          child: const SafeArea(
+          child: SafeArea(
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   verticalSpacing,
                   verticalSpacing,
-                  NewsContainer(
-                    newsimagepath: "assets/images/News/Blaue_Tonne_news.jpg",
-                    text: "Papierabfuhr erfolgt später",
+                  GestureDetector(
+                    onTap: () {
+                      alertDialogNews(context);
+                    },
+                    child: const NewsContainer(
+                      newsimagepath: "assets/images/News/Blaue_Tonne_news.jpg",
+                      text: "Papierabfuhr erfolgt später",
+                    ),
                   ),
                   verticalMediumSpacing,
-                  NewsContainer(
+                  const NewsContainer(
                       text: "Der Verkehr rollt wieder auf der Loekampstraße",
                       newsimagepath: "assets/images/News/NewsLoekampstr.jpg"),
                   verticalMediumSpacing,
-                  NewsContainer(
+                  const NewsContainer(
                       text: "Der Herbst ist da: Die Laubabfuhr startet",
                       newsimagepath: "assets/images/News/Herbst.jpg"),
                   verticalMediumSpacing,
-                  NewsContainer(
+                  const NewsContainer(
                       text: "Der Herbst ist da: Die Laubabfuhr startet",
                       newsimagepath: "assets/images/News/Herbst.jpg")
                 ],
@@ -45,4 +50,32 @@ class NewsScreen extends StatelessWidget {
           )),
     );
   }
+}
+
+//! Hier wird gerade getestet mit dem Alert Dialog. Dazu muss ich noch ein  News Repository anlegen
+Future<dynamic> alertDialogNews(BuildContext context) {
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text("Titel"),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text("Überschrift"),
+            Text("Nachricht"),
+            Image(image: AssetImage("assets/images/News/news.jpg"))
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop(); // Schließt den Dialog
+            },
+            child: const Text("ActionsText"),
+          ),
+        ],
+      );
+    },
+  );
 }
