@@ -58,8 +58,8 @@ Future<dynamic> alertDialogNews(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text("Titel"),
-        content: Column(
+        title: const Text("Titel"),
+        content: const Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text("Überschrift"),
