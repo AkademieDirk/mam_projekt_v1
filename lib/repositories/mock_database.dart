@@ -1,9 +1,9 @@
 import 'package:mam_projekt_v1/models/user.dart';
 import 'package:mam_projekt_v1/repositories/database_repository.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/information_card_data.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/information_card_class.dart';
 
 class MockDatabase implements DatabaseRepository {
+  List<Map<String, String>> trashList = [];
+
   @override
   void addNewTrashInformation(
     String title1,
@@ -12,18 +12,18 @@ class MockDatabase implements DatabaseRepository {
     String desposalDescription,
     String danger,
   ) {
-    InformationCardClass newtrashdata = InformationCardClass(
-        title1: title1,
-        title2: title2,
-        desposalDescription: desposalDescription,
-        trashDescription: trashDescription,
-        danger: danger);
-    trashdata.add(newtrashdata);
+    trashList.add({
+      'title1': title1,
+      'trashDescription': trashDescription,
+      'title2': title2,
+      'desposalDescription': desposalDescription,
+      'danger': danger,
+    });
   }
 
 //! Hier ist die User List aber ich hätte diese gerne an einer anderen Stelle in den Modells bei User. ist das möglich?
   final List<User> _users = [
-    User(userName: "kai@aa.de", password: "passwort"),
+    User(userName: "Dirk Kraft", password: "12345"),
   ];
   @override
   void getAllTrashInformation() {
@@ -67,6 +67,21 @@ class MockDatabase implements DatabaseRepository {
   Future<void> logout() {
     // TODO: implement logout
     throw UnimplementedError();
+  }
+
+  @override
+  Future<void> addNews() async {
+    // TODO: implement addNews
+  }
+
+  @override
+  Future<void> editNews() async {
+    // TODO: implement editNews
+  }
+
+  @override
+  Future<void> getNews() async {
+    // TODO: implement getNews
   }
 }
 
