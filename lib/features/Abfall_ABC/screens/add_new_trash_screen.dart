@@ -10,6 +10,8 @@ class AddNewTrashScreen extends StatefulWidget {
 
 class _AddNewTrashScreenState extends State<AddNewTrashScreen> {
   final MockDatabase mockdatabase = MockDatabase();
+
+  final _formKey = GlobalKey<FormState>();
   TextEditingController title1 = TextEditingController();
   TextEditingController trashDescription = TextEditingController();
   TextEditingController title2 = TextEditingController();
@@ -18,7 +20,68 @@ class _AddNewTrashScreenState extends State<AddNewTrashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        appBar: AppBar(title: Text(" neue Informationen hizufügen")),
+        body: Column(
+          children: [
+            Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    TextFormField(
+                      controller: title1,
+                      decoration: InputDecoration(border: OutlineInputBorder()),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "Bitte einen Titel eingeben";
+                        }
+                        return null;
+                      },
+                    ),
+                    TextFormField(
+                      controller: trashDescription,
+                      decoration: InputDecoration(border: OutlineInputBorder()),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return " Bitte eine Beschreibung eingeben";
+                        }
+                        return null;
+                      },
+                    ),
+                    TextFormField(
+                      controller: title2,
+                      decoration: InputDecoration(border: OutlineInputBorder()),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "Bitte Titel 2 eingeben";
+                        }
+                        return null;
+                      },
+                    ),
+                    TextFormField(
+                      controller: danger,
+                      decoration: InputDecoration(border: OutlineInputBorder()),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "BITTE GEFAHRENSTUFE EINGEBEN";
+                        }
+                        return null;
+                      },
+                    ),
+                    TextFormField(
+                      controller: desposalDescription,
+                      decoration: InputDecoration(border: OutlineInputBorder()),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return " Bitte Abgabeort eingeben";
+                        }
+                        return null;
+                      },
+                    )
+                  ],
+                ))
+          ],
+        ));
   }
 
   @override
