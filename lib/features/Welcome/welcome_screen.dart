@@ -4,10 +4,14 @@ import 'package:mam_projekt_v1/features/Change_Screen/content_switcher.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/login_screen.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/sized_elevation_button.dart';
+import 'package:mam_projekt_v1/repositories/database_repository.dart';
+import 'package:mam_projekt_v1/repositories/mock_database.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
-
+  WelcomeScreen({
+    super.key,
+  });
+  final DatabaseRepository repository = MockDatabase();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,12 +27,12 @@ class WelcomeScreen extends StatelessWidget {
           ),
           verticalSpacing,
           Text(
-            "Herzlich Willkommen",
+            "Herzlich Willkommen ",
             style: Theme.of(context).textTheme.displaySmall,
           ),
           verticalBigSpacing,
           SizedElevationButton(
-            screenname: const ContentSwitcher(),
+            screenname: ContentSwitcher(repository: repository),
             text: "weiter als Gast",
           ),
           verticalSpacing,

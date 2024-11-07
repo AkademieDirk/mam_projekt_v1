@@ -7,9 +7,17 @@ import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/my_own_contai
 import 'package:mam_projekt_v1/features/Login_Registration/password_renew.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final TextEditingController mailadress = TextEditingController();
+  final String mail = "info@edvprofis.com";
+  String errortext = "Test";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,12 +29,22 @@ class LoginScreen extends StatelessWidget {
           verticalBigSpacing,
           verticalBigSpacing,
           verticalBigSpacing,
-          const Center(
-            child: MyOwnContainer(
-              text: "  Enter your EMail",
-            ),
-          ),
+          Center(
+              child: TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
+                  decoration: const InputDecoration(
+                      hintText: "Bitte Mailadresse eingeben"),
+                  controller: mailadress,
+                  onChanged: (value) {
+                    if (mailadress.text == mail) {
+                      errortext = ("Alles gut");
+                    }
+                    errortext = "Falsch";
+                    return;
+                  })),
           verticalSpacing,
+          Text(errortext),
           const MyOwnContainer(text: "  Enter your Password"),
           Row(
             children: [

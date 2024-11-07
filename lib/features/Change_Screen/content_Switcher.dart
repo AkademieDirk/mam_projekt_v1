@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/repository/information_card_data.dart';
+import 'package:mam_projekt_v1/features/Abfall_ABC/information_card_data.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/screens/trash_abc_screen.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/switcher_container.dart';
 import 'package:mam_projekt_v1/features/Kalender/calender_main_screen.dart';
 import 'package:mam_projekt_v1/features/Muelltrennung/waste_separation_screen.dart';
 import 'package:mam_projekt_v1/features/News/news_screen.dart';
+import 'package:mam_projekt_v1/repositories/database_repository.dart';
 
 class ContentSwitcher extends StatelessWidget {
-  const ContentSwitcher({super.key});
-
+  const ContentSwitcher({super.key, required this.repository});
+  final DatabaseRepository repository;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
