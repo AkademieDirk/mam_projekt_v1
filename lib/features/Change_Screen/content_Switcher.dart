@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/information_card_data.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/screens/trash_abc_screen.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/switcher_container.dart';
 import 'package:mam_projekt_v1/features/Kalender/calender_main_screen.dart';
 import 'package:mam_projekt_v1/features/Muelltrennung/waste_separation_screen.dart';
 import 'package:mam_projekt_v1/features/News/news_screen.dart';
-import 'package:mam_projekt_v1/repositories/database_repository.dart';
+import 'package:mam_projekt_v1/repositories/mock_database.dart';
 
 class ContentSwitcher extends StatelessWidget {
-  const ContentSwitcher({super.key, required this.repository});
-  final DatabaseRepository repository;
+  ContentSwitcher({
+    super.key,
+  });
+  final MockDatabase mockDatabase = MockDatabase();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +34,7 @@ class ContentSwitcher extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => NewsScreen(trashdata: trashdata)));
+                      builder: (context) => const NewsScreen()));
                 },
                 child: const SwitcherContainer(
                     picturepath: "assets/icons/ContentSwitcher/News.png",
@@ -61,9 +62,7 @@ class ContentSwitcher extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => TrashAbcScreen(
-                                trashdata: trashdata,
-                              )));
+                          builder: (context) => TrashAbcScreen()));
                 },
                 child: const SwitcherContainer(
                     picturepath: "assets/icons/ContentSwitcher/AbfallABC.png",

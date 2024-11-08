@@ -2,23 +2,27 @@ import 'package:mam_projekt_v1/models/user.dart';
 import 'package:mam_projekt_v1/repositories/database_repository.dart';
 
 class MockDatabase implements DatabaseRepository {
-  List<Map<String, String>> trashList = [];
+  List<Map<String, String>> trashList = <Map<String, String>>[
+    {
+      "Abfallart": "Abbeizmittel",
+      "Entsorgung":
+          "gehört zum Sondermüll. Restlos entleerte Behälter gehören in dei gelbe Tonne",
+    }
+  ];
 
   @override
   void addNewTrashInformation(
-    String title1,
-    String trashDescription,
-    String title2,
-    String desposalDescription,
-    String danger,
+    String abfallart,
+    String entsorgung,
   ) {
     trashList.add({
-      'title1': title1,
-      'trashDescription': trashDescription,
-      'title2': title2,
-      'desposalDescription': desposalDescription,
-      'danger': danger,
+      'Abfallart': abfallart,
+      'Entsorgung': entsorgung,
     });
+  }
+
+  List<Map<String, String>> getTrashList() {
+    return trashList;
   }
 
 //! Hier ist die User List aber ich hätte diese gerne an einer anderen Stelle in den Modells bei User. ist das möglich?
@@ -115,23 +119,36 @@ Future<void> logout() {
   throw UnimplementedError();
 }
 
-// @override
-//   Future<bool> login({
-//     required String userName,
-//     required String password,
-//   }) {
-//     for (User currentUser in _users) {
-//       if (currentUser.userName == userName) {
-//         if (currentUser.password == password) {
-//           _currentUser = currentUser;
+@override
+Future<void> addNews() {
+  // TODO: implement addNews
+  throw UnimplementedError();
+}
 
-//           return Future.value(true);
-//         } else {
-//           return Future.value(false);
-//         }
-//       }
-//     }
+@override
+void deleteTrashInformation() {
+  // TODO: implement deleteTrashInformation
+}
 
-//     return Future.value(false);
-//   }
+@override
+Future<void> editNews() {
+  // TODO: implement editNews
+  throw UnimplementedError();
+}
 
+@override
+void getAllTrashInformation() {
+  // TODO: implement getAllTrashInformation
+}
+
+@override
+Future<List<User>> getAllUsers() {
+  // TODO: implement getAllUsers
+  throw UnimplementedError();
+}
+
+@override
+Future<void> getNews() {
+  // TODO: implement getNews
+  throw UnimplementedError();
+}

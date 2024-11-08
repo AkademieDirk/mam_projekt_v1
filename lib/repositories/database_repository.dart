@@ -4,11 +4,8 @@ abstract class DatabaseRepository {
   // Hier sind die Methoden für das Trash ABC
   //!--------------------------------------------------------
   void addNewTrashInformation(
-    String title1,
-    String trashDescription,
-    String title2,
-    String desposalDescription,
-    String danger,
+    String abfallart,
+    String entsorgung,
   );
   void getAllTrashInformation();
 

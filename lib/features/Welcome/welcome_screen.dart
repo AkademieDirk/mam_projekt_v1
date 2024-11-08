@@ -32,7 +32,7 @@ class WelcomeScreen extends StatelessWidget {
           ),
           verticalBigSpacing,
           SizedElevationButton(
-            screenname: ContentSwitcher(repository: repository),
+            screenname: ContentSwitcher(),
             text: "weiter als Gast",
           ),
           verticalSpacing,

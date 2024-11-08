@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/basic_app_bar.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/information_card_class.dart';
+import 'package:mam_projekt_v1/repositories/mock_database.dart';
 
 class TrashAbcScreen extends StatelessWidget {
-  const TrashAbcScreen({super.key, required this.trashdata});
-  final List<InformationCardClass> trashdata;
+  TrashAbcScreen({
+    super.key,
+  });
+  final MockDatabase mockDatabase = MockDatabase();
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class TrashAbcScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(top: 4.0, bottom: 4.0),
           child: ListView.separated(
-            itemCount: trashdata.length,
+            itemCount: mockDatabase.trashList.length,
             itemBuilder: (context, index) {
               Color backgroundColor =
                   index % 2 == 0 ? listtilestraight : listtileodd;
@@ -30,7 +32,7 @@ class TrashAbcScreen extends StatelessWidget {
                 child: ListTile(
                   selected: false,
                   title: Center(
-                      child: Text(trashdata[index].title1,
+                      child: Text(mockDatabase.trashList[index]["abfallart"]!,
                           style: Theme.of(context).textTheme.bodyMedium)),
                 ),
               );

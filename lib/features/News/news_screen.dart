@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/basic_app_bar.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/information_card_class.dart';
 import 'package:mam_projekt_v1/features/News/news_container.dart';
 
 class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key, required this.trashdata});
-  final List<InformationCardClass> trashdata;
+  const NewsScreen({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
