@@ -32,8 +32,27 @@ class TrashAbcScreen extends StatelessWidget {
                 child: ListTile(
                   selected: false,
                   title: Center(
-                      child: Text(mockDatabase.trashList[index]["abfallart"]!,
-                          style: Theme.of(context).textTheme.bodyMedium)),
+                      child: Row(
+                    children: [
+                      Text(
+                        mockDatabase.trashList[index]["Abfallart"]!,
+                        style: Theme.of(context).textTheme.headlineSmall,
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: Container(
+                          child: Text(
+                            mockDatabase.trashList[index]["Entsorgung"]!,
+                            style: Theme.of(context).textTheme.bodyMedium,
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ],
+                  )),
                 ),
               );
             },

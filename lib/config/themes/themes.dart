@@ -11,6 +11,8 @@ ThemeData mamTheme = ThemeData(
         displaySmall: TextStyle(
           fontSize: 24,
         ),
+        headlineSmall:
+            TextStyle(fontSize: smallTextSize, fontWeight: FontWeight.bold),
         headlineMedium:
             TextStyle(fontSize: mediumTextSize, fontWeight: FontWeight.bold),
         headlineLarge:

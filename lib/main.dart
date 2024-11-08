@@ -22,11 +22,11 @@ class MainApp extends StatelessWidget {
   final MockDatabase mockDatabase = MockDatabase();
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         body:
             //theme: mamTheme,
-            AddNewTrashScreen(),
+            WelcomeScreen(),
       ),
     );
   }

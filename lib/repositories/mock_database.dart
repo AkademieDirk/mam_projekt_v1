@@ -6,7 +6,7 @@ class MockDatabase implements DatabaseRepository {
     {
       "Abfallart": "Abbeizmittel",
       "Entsorgung":
-          "gehört zum Sondermüll. Restlos entleerte Behälter gehören in dei gelbe Tonne",
+          "unentleert gehört es in den Sondermüll. Restlos entleerte Behälter gehören in die gelbe Tonne. ",
     }
   ];
 
