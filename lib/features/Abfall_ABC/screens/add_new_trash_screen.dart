@@ -3,8 +3,8 @@ import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/list_view_buildermanu
 import 'package:mam_projekt_v1/repositories/mock_database.dart';
 
 class AddNewTrashScreen extends StatefulWidget {
-  const AddNewTrashScreen({super.key});
-
+  AddNewTrashScreen({super.key});
+  final MockDatabase mockdatabase = MockDatabase();
   @override
   State<AddNewTrashScreen> createState() => _AddNewTrashScreenState();
 }

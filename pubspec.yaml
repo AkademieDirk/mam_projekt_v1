@@ -13,6 +13,7 @@ dependencies:
   flutter_social_button: ^1.1.4+1
   font_awesome_flutter: ^10.7.0
   glass_container: ^0.0.4
+  shared_preferences: ^2.3.3
   
 
 dev_dependencies:

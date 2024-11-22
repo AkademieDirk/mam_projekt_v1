@@ -10,6 +10,7 @@ import 'package:mam_projekt_v1/repositories/mock_database.dart';
 class WelcomeScreen extends StatelessWidget {
   WelcomeScreen({
     super.key,
+    required mockDataBase,
   });
   final DatabaseRepository repository = MockDatabase();
   @override

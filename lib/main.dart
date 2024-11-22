@@ -19,14 +19,14 @@ class MainApp extends StatelessWidget {
     super.key,
   });
 
-  final MockDatabase mockDatabase = MockDatabase();
+  final MockDatabase mockDataBase = MockDatabase();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body:
             //theme: mamTheme,
-            WelcomeScreen(),
+            WelcomeScreen(mockDataBase: mockDataBase),
       ),
     );
   }

@@ -43,12 +43,10 @@ class TrashAbcScreen extends StatelessWidget {
                         width: 20,
                       ),
                       Expanded(
-                        child: Container(
-                          child: Text(
-                            mockDatabase.trashList[index]["Entsorgung"]!,
-                            style: Theme.of(context).textTheme.bodyMedium,
-                            textAlign: TextAlign.center,
-                          ),
+                        child: Text(
+                          mockDatabase.trashList[index]["Entsorgung"]!,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ],

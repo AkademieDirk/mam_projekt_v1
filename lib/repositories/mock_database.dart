@@ -142,12 +142,6 @@ void getAllTrashInformation() {
 }
 
 @override
-Future<List<User>> getAllUsers() {
-  // TODO: implement getAllUsers
-  throw UnimplementedError();
-}
-
-@override
 Future<void> getNews() {
   // TODO: implement getNews
   throw UnimplementedError();
