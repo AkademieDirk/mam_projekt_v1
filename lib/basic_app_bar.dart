@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
+import 'package:mam_projekt_v1/features/Abfall_ABC/screens/add_new_trash_screen.dart';
 
 class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
   const BasicAppBar({
@@ -24,6 +25,12 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
 
       centerTitle: true,
       actions: [
+        IconButton(
+            icon: const Icon(Icons.add),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AddNewTrashScreen()));
+            }),
         SizedBox(
           width: 50,
           child: Image(

@@ -19,7 +19,7 @@ class _AddNewTrashScreenState extends State<AddNewTrashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(" neue Informationen hizufügen")),
+      appBar: AppBar(title: const Text("Diese Seite ist nur zum Test")),
       body: Column(
         children: [
           Form(
@@ -74,7 +74,10 @@ class _AddNewTrashScreenState extends State<AddNewTrashScreen> {
             height: 20,
           ),
 
-          // ListViewBuildermanual(mockdatabase: mockdatabase),
+          ListViewBuildermanual(
+            mockdatabase: mockdatabase,
+            trashList: mockdatabase.trashList,
+          ),
         ],
       ),
     );

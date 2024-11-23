@@ -15,10 +15,11 @@ class TrashAbcScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const BasicAppBar(
-          title: "Abfall ABC",
-          canColorImagePath:
-              "assets/images/TrashCanColor/Fragezeichen_transparent.png",
-          textcolor: Colors.black),
+        title: "Abfall ABC",
+        textcolor: Colors.black,
+        canColorImagePath:
+            'assets/images/TrashCanColor/Fragezeichen_transparent.png',
+      ),
       body: Container(
         decoration: background,
         child: Padding(

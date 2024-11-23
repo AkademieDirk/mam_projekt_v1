@@ -16,7 +16,7 @@ class ListViewTrash extends StatelessWidget {
       future: mockDatabase.getTrashList(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             ),

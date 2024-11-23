@@ -3,7 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
 
-import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/classes/my_own_container.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/Logic/email_examination.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/password_renew.dart';
 import 'package:mam_projekt_v1/features/Login_Registration/registration_screen.dart';

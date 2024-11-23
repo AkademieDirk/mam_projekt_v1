@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:async';
 
 import 'package:mam_projekt_v1/models/user.dart';
@@ -17,10 +19,11 @@ class MockDatabase implements DatabaseRepository {
   ];
   User? _currentUser;
   @override
-  void addNewTrashInformation(
+  Future<void> addNewTrashInformation(
     String abfallart,
     String entsorgung,
-  ) {
+  ) async {
+    await Future.delayed(Duration(seconds: 2));
     trashList.add({
       'Abfallart': abfallart,
       'Entsorgung': entsorgung,
@@ -28,7 +31,7 @@ class MockDatabase implements DatabaseRepository {
   }
 
   Future<List<Map<String, String>>> getTrashList() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     return trashList;
   }
 
