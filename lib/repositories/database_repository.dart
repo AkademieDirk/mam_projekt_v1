@@ -14,7 +14,7 @@ abstract class DatabaseRepository {
   // Hier alle Methoden zu den Usern
 
   Future<List<User>> getAllUsers();
-  Future<bool> addUser(String userName, String password);
+  Future<bool> addUser(String newUserName, String newPassword);
   Future<void> editUser(User user);
 
   Future<bool> login({
