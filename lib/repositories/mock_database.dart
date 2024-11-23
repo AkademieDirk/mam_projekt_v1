@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:mam_projekt_v1/models/user.dart';
 import 'package:mam_projekt_v1/repositories/database_repository.dart';
 
@@ -25,7 +27,8 @@ class MockDatabase implements DatabaseRepository {
     });
   }
 
-  List<Map<String, String>> getTrashList() {
+  Future<List<Map<String, String>>> getTrashList() async {
+    await Future.delayed(Duration(seconds: 3));
     return trashList;
   }
 

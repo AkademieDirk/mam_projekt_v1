@@ -74,7 +74,7 @@ class _AddNewTrashScreenState extends State<AddNewTrashScreen> {
             height: 20,
           ),
 
-          ListViewBuildermanual(mockdatabase: mockdatabase),
+          // ListViewBuildermanual(mockdatabase: mockdatabase),
         ],
       ),
     );
