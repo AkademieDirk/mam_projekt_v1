@@ -9,7 +9,11 @@ class MockDatabase implements DatabaseRepository {
           "unentleert gehört es in den Sondermüll. Restlos entleerte Behälter gehören in die gelbe Tonne. ",
     }
   ];
-
+  // Liste mit Usern
+  final List<User> _users = [
+    User(userName: " Dirk", password: "1234"),
+  ];
+  User? _currentUser;
   @override
   void addNewTrashInformation(
     String abfallart,
@@ -25,10 +29,6 @@ class MockDatabase implements DatabaseRepository {
     return trashList;
   }
 
-//! Hier ist die User List aber ich hätte diese gerne an einer anderen Stelle in den Modells bei User. ist das möglich?
-  final List<User> _users = [
-    User(userName: "Dirk Kraft", password: "12345"),
-  ];
   @override
   void getAllTrashInformation() {
     // TODO: implement getAllTrashInformation
@@ -44,9 +44,17 @@ class MockDatabase implements DatabaseRepository {
   }
 
   @override
-  Future<bool> addUser(String userName, String password) {
-    // TODO: implement addUser
-    throw UnimplementedError();
+  Future<bool> addUser(String newUserName, String newPassword) {
+    // Überprüfen, ob es den User schon gibt.
+    for (User user in _users) {
+      if (newUserName == user.userName) {
+        return Future.value(false);
+      }
+    }
+    User newUser = User(userName: newUserName, password: newPassword);
+    _users.add(newUser);
+
+    return Future.delayed(const Duration(seconds: 1), () => true);
   }
 
   @override
@@ -57,7 +65,21 @@ class MockDatabase implements DatabaseRepository {
 
   @override
   Future<User?> getCurrentUser() {
-    // TODO: implement getCurrentUser
+    return Future.delayed(
+      const Duration(milliseconds: 1234),
+      () => _currentUser,
+    );
+  }
+
+  @override
+  Future<void> addNews() {
+    // TODO: implement addNews
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> editNews() {
+    // TODO: implement editNews
     throw UnimplementedError();
   }
 
@@ -74,75 +96,7 @@ class MockDatabase implements DatabaseRepository {
   }
 
   @override
-  Future<void> addNews() async {
-    // TODO: implement addNews
-  }
-
-  @override
-  Future<void> editNews() async {
-    // TODO: implement editNews
-  }
-
-  @override
   Future<void> getNews() async {
     // TODO: implement getNews
   }
-}
-
-@override
-Future<bool> addUser(String userName, String password) {
-  // TODO: implement addUser
-  throw UnimplementedError();
-}
-
-@override
-Future<void> editUser(User user) {
-  // TODO: implement editUser
-  throw UnimplementedError();
-}
-
-@override
-Future<bool> login({required String userName, required String password}) {
-  // TODO: implement login
-  throw UnimplementedError();
-}
-
-@override
-Future<User?> getCurrentUser() {
-  // TODO: implement getCurrentUser
-  throw UnimplementedError();
-}
-
-@override
-Future<void> logout() {
-  // TODO: implement logout
-  throw UnimplementedError();
-}
-
-@override
-Future<void> addNews() {
-  // TODO: implement addNews
-  throw UnimplementedError();
-}
-
-@override
-void deleteTrashInformation() {
-  // TODO: implement deleteTrashInformation
-}
-
-@override
-Future<void> editNews() {
-  // TODO: implement editNews
-  throw UnimplementedError();
-}
-
-@override
-void getAllTrashInformation() {
-  // TODO: implement getAllTrashInformation
-}
-
-@override
-Future<void> getNews() {
-  // TODO: implement getNews
-  throw UnimplementedError();
 }
