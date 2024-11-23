@@ -69,7 +69,7 @@ class MockDatabase implements DatabaseRepository {
   @override
   Future<User?> getCurrentUser() {
     return Future.delayed(
-      const Duration(milliseconds: 1234),
+      const Duration(seconds: 1),
       () => _currentUser,
     );
   }

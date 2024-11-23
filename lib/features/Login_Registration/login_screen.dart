@@ -19,6 +19,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController mailadress = TextEditingController();
+  final TextEditingController password = TextEditingController();
   final String mail = "info@edvprofis.com";
   String errortext = "Test";
   @override
@@ -51,8 +52,26 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             )),
             verticalSpacing,
+            Center(
+                child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: SizedBox(
+                width: 200,
+                height: 50,
+                child: TextFormField(
+                  style: const TextStyle(fontSize: 12),
+                  keyboardType: TextInputType.visiblePassword,
+                  textInputAction: TextInputAction.next,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: "Bitte Passwort eingeben",
+                  ),
+                  controller: password,
+                ),
+              ),
+            )),
             // Text("$ausgabe"),
-            const MyOwnContainer(text: "  Enter your Password"),
+
             Row(
               children: [
                 const SizedBox(
