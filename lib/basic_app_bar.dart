@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:mam_projekt_v1/config/colors/colors.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/screens/add_new_trash_screen.dart';
 
 class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
   const BasicAppBar({
     super.key,
-    required this.title,
-    required this.canColorImagePath,
-    required this.textcolor,
+    this.title,
+    this.canColorImagePath,
+    this.textcolor,
+    this.backgroundColor,
   });
-  final String title;
-  final String canColorImagePath;
-  final Color textcolor;
+  final String? title;
+  final String? canColorImagePath;
+  final Color? textcolor;
+  final Color? backgroundColor;
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(title,
+      title: Text(title!,
           style: Theme.of(context)
               .textTheme
               .displaySmall
@@ -25,16 +26,16 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
 
       centerTitle: true,
       actions: [
-        IconButton(
-            icon: const Icon(Icons.add),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => AddNewTrashScreen()));
-            }),
+        // IconButton(
+        //     icon: const Icon(Icons.add),
+        //     onPressed: () {
+        //       Navigator.push(context,
+        //           MaterialPageRoute(builder: (context) => AddNewTrashScreen()));
+        //     }),
         SizedBox(
           width: 50,
           child: Image(
-            image: AssetImage(canColorImagePath),
+            image: AssetImage(canColorImagePath!),
           ),
         ),
         const SizedBox(

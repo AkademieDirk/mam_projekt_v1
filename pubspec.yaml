@@ -7,13 +7,17 @@ environment:
   sdk: ^3.5.2
 
 dependencies:
+  csv: ^6.0.0
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.14.1
   flutter_social_button: ^1.1.4+1
-  font_awesome_flutter: ^10.7.0
+  font_awesome_flutter: ^10.8.0
   glass_container: ^0.0.4
+  http: ^1.2.2
   shared_preferences: ^2.3.3
+  syncfusion_flutter_calendar: ^27.2.4
+  webview_flutter: ^4.10.0
   
 
 dev_dependencies:
@@ -43,6 +47,10 @@ flutter:
     - assets/images/News/
     - assets/images/TrashCanColor/
     - assets/images/TrashCanColor/Muellabfuhr.jpeg
+    - assets/sheets/streets.csv
+    - assets/sheets/Testcsv.csv
+    - assets/sheets/abfallABCv1.csv
+    - assets/images/ABC.png
    
 
 

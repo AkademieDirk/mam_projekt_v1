@@ -8,16 +8,19 @@ import 'package:mam_projekt_v1/features/Muelltrennung/yellow_can.dart';
 import 'package:mam_projekt_v1/features/News/garbage_paint_container.dart';
 
 class Muelltrennung extends StatelessWidget {
-  const Muelltrennung({super.key});
+  Muelltrennung({super.key});
+
+  final ThemeData mamTheme = ThemeData();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const BasicAppBar(
-            title: "Was gehört wo rein?",
-            canColorImagePath:
-                "assets/images/TrashCanColor/Tonne_gruen_comic.png",
-            textcolor: Colors.black),
+          title: "Was gehört wo rein?",
+          canColorImagePath:
+              "assets/images/TrashCanColor/Tonne_gruen_comic.png",
+          textcolor: Colors.white,
+        ),
         body: Container(
             width: double.infinity,
             decoration: background,

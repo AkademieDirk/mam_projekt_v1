@@ -7,7 +7,7 @@ abstract class DatabaseRepository {
     String abfallart,
     String entsorgung,
   );
-  void getAllTrashInformation();
+  Future<List<List<dynamic>>> getAllTrashInformation();
 
   void deleteTrashInformation();
 //!--------------------------------------------------------
@@ -27,8 +27,8 @@ abstract class DatabaseRepository {
 //!-------------------------------------------------------
 
 // Hier die Methoden zu den News
-  Future<void> addNews();
-  Future<void> editNews();
+  // Future<void> addNews();
+  // Future<void> editNews();
   Future<void> getNews();
 
   //!-----------------------------------------------------

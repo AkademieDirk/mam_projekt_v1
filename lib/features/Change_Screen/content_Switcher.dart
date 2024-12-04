@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mam_projekt_v1/Items_Test/csv_filtered.dart';
 import 'package:mam_projekt_v1/config/themes/themes.dart';
-import 'package:mam_projekt_v1/features/Abfall_ABC/screens/trash_abc_screen.dart';
+import 'package:mam_projekt_v1/features/Abfall_ABC/screens/list_view_trash_abc.dart';
 import 'package:mam_projekt_v1/features/Abfall_ABC/widgets/switcher_container.dart';
-import 'package:mam_projekt_v1/features/Kalender/calender_main_screen.dart';
 import 'package:mam_projekt_v1/features/Muelltrennung/waste_separation_screen.dart';
 import 'package:mam_projekt_v1/features/News/news_screen.dart';
 import 'package:mam_projekt_v1/repositories/mock_database.dart';
@@ -23,7 +23,8 @@ class ContentSwitcher extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const CalendarMainScreen()));
+                      builder: (context) =>
+                          const InteractiveFilteredCalendar()));
                 },
                 child: const SwitcherContainer(
                   picturepath: "assets/icons/ContentSwitcher/Calendar.png",
@@ -47,10 +48,8 @@ class ContentSwitcher extends StatelessWidget {
               verticalSpacing,
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Muelltrennung()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Muelltrennung()));
                 },
                 child: const SwitcherContainer(
                     picturepath: "assets/icons/ContentSwitcher/Recycling.png",
@@ -62,7 +61,7 @@ class ContentSwitcher extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => TrashAbcScreen()));
+                          builder: (context) => const TrashListView()));
                 },
                 child: const SwitcherContainer(
                     picturepath: "assets/icons/ContentSwitcher/AbfallABC.png",
